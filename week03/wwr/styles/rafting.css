@@ -1,70 +1,112 @@
 :root {
-  --primary-color: #00916E; /* sea green */
-  --secondary-color: #DE3C4B; /* rusty red */
-  --accent1-color: #87F5FB; /* electric blue */
-  --accent2-color: #00171F; /* rich black */
+  --primary-color: #00916E;      /* sea green */
+  --secondary-color: #DE3C4B;    /* rusty red */
+  --accent1-color: #00171F;      /* rich black */
+  --accent2-color: #87F5FB;      /* electric blue */
   --heading-font: "Merriweather Sans", sans-serif;
-  --body-font: "Lato", sans-serif;
+  --body-font: "Open Sans", sans-serif;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-  }
-
-  * {
+/* Reset del modelo de caja */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo general del cuerpo del sitio */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
 }
 
-header, main, footer {
+/* Estructura centrada */
+header,
+main,
+footer {
   width: 840px;
   margin: 0 auto;
 }
 
-
+/* Encabezados */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
+/* Márgenes y padding uniformes */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+/* Estilo del encabezado */
+header {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
 }
 
+/* Quitar subrayado de enlaces de redes sociales */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* Sección hero */
 .hero {
   position: relative;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: 16px 0;
   text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff; /* white text - make sure there is enough contrast with the background-color */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
-.hero article img {
-  float: right;
-  width: 125px;
+/* Caja de texto superpuesta con imagen */
+.hero-overlay {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(0, 117, 185, 0.7); /* Azul semitransparente */
+  color: white;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.hero-overlay p {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hero-overlay img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo adicional para las imágenes de "Adventure Awaits" */
+section img {
+  margin: 8px;
+  display: inline-block;
+}
+
+section {
+  text-align: center;
 }
