@@ -7,7 +7,7 @@
   --body-font: "Open Sans", sans-serif;
 }
 
-/* Reset del modelo de caja */
+/* Box reset */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ footer {
   margin: 0 auto;
 }
 
-/* ENCABEZADO */
+/* Header  */
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -114,7 +114,7 @@ header nav ul li a:hover {
   border-radius: 8px;
 }
 
-/* HISTORIA */
+/* History  */
 .history {
   margin: 32px 0;
   padding: 16px;
@@ -129,7 +129,7 @@ header nav ul li a:hover {
   line-height: 1.6;
 }
 
-/* AVENTURAS */
+/* Adventure */
 .adventures {
   margin: 32px 0;
   padding: 16px;
@@ -182,7 +182,7 @@ footer .socialmedia a img {
   height: 24px;
 }
 
-/* ENLACES GENERALES */
+/* General links */
 a {
   color: inherit;
 }
