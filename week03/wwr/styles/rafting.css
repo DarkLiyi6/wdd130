@@ -14,13 +14,12 @@
   box-sizing: border-box;
 }
 
-/* Estilo general del cuerpo del sitio */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
+  background-color: #fff;
 }
 
-/* Estructura centrada */
 header,
 main,
 footer {
@@ -28,30 +27,45 @@ footer {
   margin: 0 auto;
 }
 
-/* Encabezados */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* Márgenes y padding uniformes */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Estilo del encabezado */
+/* ENCABEZADO */
 header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   background-color: var(--primary-color);
   color: var(--accent2-color);
+  padding: 16px;
+  gap: 16px;
 }
 
-/* Quitar subrayado de enlaces de redes sociales */
-.socialmedia a {
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+header nav ul li a {
   text-decoration: none;
+  color: var(--accent2-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* Sección hero */
+header nav ul li a:hover {
+  color: white;
+}
+
+/* HERO */
 .hero {
   position: relative;
 }
@@ -75,12 +89,11 @@ header {
   letter-spacing: 1px;
 }
 
-/* Caja de texto superpuesta con imagen */
 .hero-overlay {
   position: absolute;
   bottom: 30px;
   right: 30px;
-  background-color: rgba(0, 117, 185, 0.7); /* Azul semitransparente */
+  background-color: rgba(0, 117, 185, 0.7);
   color: white;
   padding: 16px;
   display: flex;
@@ -101,12 +114,75 @@ header {
   border-radius: 8px;
 }
 
-/* Estilo adicional para las imágenes de "Adventure Awaits" */
-section img {
-  margin: 8px;
-  display: inline-block;
+/* HISTORIA */
+.history {
+  margin: 32px 0;
+  padding: 16px;
 }
 
-section {
+.history h2 {
+  margin-bottom: 12px;
+}
+
+.history p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* AVENTURAS */
+.adventures {
+  margin: 32px 0;
+  padding: 16px;
+}
+
+.adventures h2 {
+  margin-bottom: 20px;
+}
+
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.adventure-gallery figure {
   text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--accent1-color);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--accent1-color);
+  color: white;
+  margin-top: 40px;
+}
+
+footer .socialmedia {
+  display: flex;
+  gap: 12px;
+}
+
+footer .socialmedia a img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ENLACES GENERALES */
+a {
+  color: inherit;
 }
